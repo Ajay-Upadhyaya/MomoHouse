@@ -1,0 +1,33 @@
+.allura-regular {
+  font-family: "Allura", cursive;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.allura {
+  font-family: "Allura", cursive;
+  font-size: 30px;
+}
+
+.inter-paragraph {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.chela-one-regular {
+  font-family: "Chela One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.allergy {
+  font-family: "Chela One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.navbar li:visited {
+  color: blue;
+}
