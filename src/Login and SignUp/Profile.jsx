@@ -50,7 +50,6 @@ const Profile = () => {
               <p className="lg:text-lg text-base font-medium font-serif">
                 {" "}
                 Email : <span className="underline">{user?.email}</span>
-                {user?.email}
               </p>
               <button
                 onClick={() =>
