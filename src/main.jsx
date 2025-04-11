@@ -11,10 +11,10 @@ createRoot(document.getElementById("root")).render(
   <BrowserRouter>
     <CartProvider>
       <Auth0Provider
-        domain="dev-dn552u3ilfm50pbn.us.auth0.com"
-        clientId="5yzc0RE860Ztc2BuxREDIDp6ieyGQyE5"
+        domain="dev-knv3b0h3ict33h8u.us.auth0.com"
+        clientId="Sgayxo45rokS3y082CTPHrFSRe6SxyHZ"
         authorizationParams={{
-          redirect_uri: window.location.origin,
+          redirect_uri: window.location.origin
         }}
       >
         <App />
