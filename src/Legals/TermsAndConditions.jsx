@@ -72,9 +72,9 @@ const TermsAndConditions = () => {
           <p className="text-gray-600 leading-relaxed">
             If you have questions or concerns about these Terms and Conditions,
             please contact us at
-            <Navlink className="text-blue-500" to="mailto:momohouse@gmail.com ">
+            <NavLink className="text-blue-500" to="mailto:momohouse@gmail.com ">
               momohouse@gmail.com
-            </Navlink>
+            </NavLink>
           </p>
         </section>
       </div>
