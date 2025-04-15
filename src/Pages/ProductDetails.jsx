@@ -98,6 +98,9 @@ function ProductDetails() {
               {/* {singleProduct.ingredients.map((item) => {
                 return <li>{item}</li>;
               })} */}
+              {singleProduct.ingredients.map((item) => {
+                return <li>{item}</li>;
+              })}
               <li className="text-gray-400 ">{singleProduct.ingredients}</li>
             </ol>
           </div>
