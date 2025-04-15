@@ -10,7 +10,7 @@ import { ImCross } from "react-icons/im";
 import { useState } from "react";
 import "../Pages/Fonts.css";
 import { useAuth0 } from "@auth0/auth0-react";
-
+import "./Navigation.css";
 import { CartContext } from "../Context/CartProvider";
 
 function Navigation() {
@@ -42,29 +42,46 @@ function Navigation() {
         </div>
         <div className="flex items-center gap-3 ">
           <ul className="lg:flex hidden items-center gap-5 navbar ">
-            <NavLink to="/about">
-              <li className="md:text-lg text-sm font-semibold text-[#6B788E] hover:text-[#D95103]   active:text-red-500">
-                {" "}
-                About us
-              </li>
+            <NavLink
+              to="/about"
+              className={({ isActive }) =>
+                `md:text-lg text-sm font-semibold hover:text-[#D95103] ${
+                  isActive ? "text-[#0C6967] underline" : "text-[#6B788E]"
+                }`
+              }
+            >
+              <li> About us</li>
             </NavLink>
-            <NavLink to="/menu">
-              <li className="md:text-lg text-sm font-semibold text-[#6B788E] hover:text-[#D95103]  active:text-red-500">
-                {" "}
-                Menu
-              </li>
+            <NavLink
+              to="/menu"
+              className={({ isActive }) =>
+                `md:text-lg text-sm font-semibold hover:text-[#D95103] ${
+                  isActive ? "text-[#0C6967] underline" : "text-[#6B788E]"
+                }`
+              }
+            >
+              <li> Menu</li>
             </NavLink>
-            <NavLink to="/services">
-              <li className="md:text-lg text-sm font-semibold text-[#6B788E] hover:text-[#D95103]  active:text-red-500">
-                Our Services
-              </li>
+            <NavLink
+              to="/services"
+              className={({ isActive }) =>
+                `md:text-lg text-sm font-semibold hover:text-[#D95103] ${
+                  isActive ? "text-[#0C6967] underline" : "text-[#6B788E]"
+                }`
+              }
+            >
+              <li>Our Services</li>
             </NavLink>
 
-            <NavLink to="/allergyadvice">
-              <li className="md:text-lg text-sm font-semibold text-[#6B788E] hover:text-[#D95103]  active:text-red-500">
-                {" "}
-                Allergy Advice
-              </li>
+            <NavLink
+              to="/allergyadvice"
+              className={({ isActive }) =>
+                `md:text-lg text-sm font-semibold hover:text-[#D95103] ${
+                  isActive ? "text-[#0C6967] underline" : "text-[#6B788E]"
+                }`
+              }
+            >
+              <li> Allergy Advice</li>
             </NavLink>
 
             <NavLink to="/cart">
@@ -107,31 +124,46 @@ function Navigation() {
             <div className="flex  gap-5 bg-[#0C6967] opacity-90  text-white h-[100vh]  right-0 py-3 px-4 z-50 fixed">
               <ul className="flex  gap-5 lg:hidden flex-col ">
                 <NavLink to="/about">
-                  <li className="md:text-lg text-sm font-semibold text-white hover:text-red-500   active:text-red-500">
+                  <li
+                    onClick={toggle}
+                    className="md:text-lg text-sm font-semibold text-white hover:text-red-500   active:text-red-500"
+                  >
                     {" "}
                     About us
                   </li>
                 </NavLink>
                 <NavLink to="/menu">
-                  <li className="md:text-lg text-sm font-semibold text-white hover:text-red-500   active:text-red-500">
+                  <li
+                    onClick={toggle}
+                    className="md:text-lg text-sm font-semibold text-white hover:text-red-500   active:text-red-500"
+                  >
                     {" "}
                     Menu
                   </li>
                 </NavLink>
                 <NavLink to="/services">
-                  <li className="md:text-lg text-sm font-semibold text-white hover:text-red-500   active:text-red-500">
+                  <li
+                    onClick={toggle}
+                    className="md:text-lg text-sm font-semibold text-white hover:text-red-500   active:text-red-500"
+                  >
                     Our Services
                   </li>
                 </NavLink>
 
                 <NavLink to="/contact">
-                  <li className="md:text-lg text-sm font-semibold text-white hover:text-red-500   active:text-red-500">
+                  <li
+                    onClick={toggle}
+                    className="md:text-lg text-sm font-semibold text-white hover:text-red-500   active:text-red-500"
+                  >
                     Contact
                   </li>
                 </NavLink>
 
                 <NavLink to="/allergyadvice">
-                  <li className="md:text-lg text-sm font-semibold text-white hover:text-red-500   active:text-red-500">
+                  <li
+                    onClick={toggle}
+                    className="md:text-lg text-sm font-semibold text-white hover:text-red-500   active:text-red-500"
+                  >
                     {" "}
                     Allergy Advice
                   </li>
@@ -147,7 +179,10 @@ function Navigation() {
                   </NavLink>
                 ) : (
                   <NavLink to="/login">
-                    <li className="md:text-lg text-sm font-semibold text-white hover:text-red-500   active:text-red-500">
+                    <li
+                      onClick={toggle}
+                      className="md:text-lg text-sm font-semibold text-white hover:text-red-500   active:text-red-500"
+                    >
                       {" "}
                       Login
                     </li>
@@ -155,7 +190,10 @@ function Navigation() {
                 )}
 
                 <NavLink to="/cart">
-                  <li className="md:text-lg flex text-sm font-semibold    active:text-red-500">
+                  <li
+                    onClick={toggle}
+                    className="md:text-lg flex text-sm font-semibold    active:text-red-500"
+                  >
                     {" "}
                     <p>
                       <IoCartOutline className="text-2xl text-white hover:text-red-500" />{" "}
@@ -174,7 +212,7 @@ function Navigation() {
             </div>
           ) : (
             <IoMdMenu
-              className="lg:text-2xl text-xl lg:my-0 my-2  text-[#6B788E] hover:text-[#D95103] font-bold cursor-pointer relative right-2"
+              className="md:text-2xl text-xl lg:my-0 my-2 mr-1 text-[#6B788E] hover:text-[#D95103] font-bold cursor-pointer relative right-2"
               onClick={toggle}
             />
           )}
