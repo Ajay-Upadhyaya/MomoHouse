@@ -34,8 +34,8 @@ const Profile = () => {
   return (
     isAuthenticated && (
       <>
-        <div className="my-10 mx-auto lg:w-[500px] w-[300px] rounded-lg shadow-lg shadow-gray-400">
-          <div className="flex py-2 px-4 gap-4">
+        <div className="my-32 mx-auto lg:w-[500px] w-[300px] rounded-lg shadow-lg shadow-gray-400">
+          <div className="flex py-2 px-4 gap-4 ">
             <div>
               <img
                 src={user?.picture}
