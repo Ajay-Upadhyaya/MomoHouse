@@ -17,6 +17,8 @@ import Failure from "./Payment/Failure";
 import Success from "./Payment/Success";
 import Profile from "./Login and SignUp/Profile";
 import Protected from "./Login and SignUp/Protected";
+import TermsAndConditions from "./Legals/TermsAndConditions";
+import PrivacyPolicy from "./Legals/PrivacyPolicy";
 function App() {
   return (
     <div>
@@ -42,6 +44,14 @@ function App() {
         <Route
           path="/profile"
           element={<Protected component={<Profile />} />}
+        />
+         <Route
+          path="/terms&conditions"
+          element={<Protected component={<TermsAndConditions />} />}
+        />
+        <Route
+          path="/privacypolicy"
+          element={<Protected component={<PrivacyPolicy />} />}
         />
       </Routes>
       <Footer />

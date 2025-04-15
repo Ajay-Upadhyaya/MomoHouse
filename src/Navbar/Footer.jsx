@@ -61,12 +61,18 @@ function Footer() {
         </div>
         <div className="legals flex flex-col text-justify ">
           <h1 className="logohead font-bold pb-2">Legals</h1>
-          <p className="text-gray-500 lg:text-sm text-xs">
-            {" "}
-            Terms & Conditions
-          </p>
-          <p className="text-gray-500 lg:text-sm text-xs"> Privacy Policy</p>
-          <p className="text-gray-500 lg:text-sm text-xs"> Support</p>
+          <NavLink to="/terms&conditions">
+            <p className="text-gray-500 lg:text-sm text-xs">
+              {" "}
+              Terms & Conditions
+            </p>
+          </NavLink>
+          <NavLink to="/privacypolicy">
+            <p className="text-gray-500 lg:text-sm text-xs"> Privacy Policy</p>
+          </NavLink>
+          <NavLink to={"/contact"}>
+            <p className="text-gray-500 lg:text-sm text-xs"> Support</p>
+          </NavLink>
         </div>
         <div className="flex flex-col ml-3 ">
           <h1 className="logohead font-bold pb-3">Follow Us</h1>
