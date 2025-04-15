@@ -31,7 +31,7 @@ function Navigation() {
   return (
     <>
       <div className="flex lg:flex-row  lg:items-center lg:justify-around justify-between lg:py-3 pl-5 border-b-[1px] border-gray-300 text-justify ">
-        <div className="lg:mb-0 mb-3 ">
+        <div className="lg:mb-0 mb-3 lg:ml-0 ml-3">
           <NavLink
             to="/"
             className="flex items-center lg:gap-3 gap-1 md:text-xl text-md font-semibold text-[#0C6967]  "
