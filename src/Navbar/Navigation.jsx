@@ -46,7 +46,7 @@ function Navigation() {
               to="/about"
               className={({ isActive }) =>
                 `md:text-lg text-sm font-semibold hover:text-[#D95103] ${
-                  isActive ? "text-[#0C6967] text-xl" : "text-[#6B788E] text-lg"
+                  isActive ? "text-[#0C6967] " : "text-[#6B788E] "
                 }`
               }
             >
@@ -56,7 +56,7 @@ function Navigation() {
               to="/menu"
               className={({ isActive }) =>
                 `md:text-lg text-sm font-semibold hover:text-[#D95103] ${
-                  isActive ? "text-[#0C6967] text-xl" : "text-[#6B788E] text-lg"
+                  isActive ? "text-[#0C6967] " : "text-[#6B788E] "
                 }`
               }
             >
@@ -66,7 +66,7 @@ function Navigation() {
               to="/services"
               className={({ isActive }) =>
                 `md:text-lg text-sm font-semibold hover:text-[#D95103] ${
-                  isActive ? "text-[#0C6967] text-xl" : "text-[#6B788E] text-lg"
+                  isActive ? "text-[#0C6967] " : "text-[#6B788E] "
                 }`
               }
             >
@@ -77,7 +77,7 @@ function Navigation() {
               to="/allergyadvice"
               className={({ isActive }) =>
                 `md:text-lg text-sm font-semibold hover:text-[#D95103] ${
-                  isActive ? "text-[#0C6967] text-xl" : "text-[#6B788E] text-lg"
+                  isActive ? "text-[#0C6967] " : "text-[#6B788E] "
                 }`
               }
             >
