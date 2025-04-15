@@ -98,9 +98,13 @@ function ProductDetails() {
               {/* {singleProduct.ingredients.map((item) => {
                 return <li>{item}</li>;
               })} */}
-              {singleProduct.ingredients.map((item) => {
-                return <li>{item}</li>;
-              })}
+
+              {/* {
+
+                for (let i=0; i < singleProduct.ingredients.length ; i++){
+                  return (<li>{singleProduct.ingredients[i]}</li>)
+                };
+              } */}
               <li className="text-gray-400 ">{singleProduct.ingredients}</li>
             </ol>
           </div>
