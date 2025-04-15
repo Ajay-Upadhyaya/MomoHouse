@@ -6,21 +6,21 @@ import { CartContext } from "../Context/CartProvider";
 function ProductDetails() {
   const [singleProduct, setSingleProduct] = useState({});
   const [quantity, setQuantity] = useState(1);
+  const [ingredients, setIngredients] = useState([]);
   const { productID } = useParams();
 
   const { dispatch } = useContext(CartContext);
-
   const navigate = useNavigate();
 
   let totalPrice = singleProduct.caloriesPerServing * quantity;
-
-  console.log(singleProduct.ingredients);
 
   const getSingleProduct = async () => {
     let data = await fetch(`https://dummyjson.com/recipes/${productID}`);
     data = await data.json();
     console.log(data);
     setSingleProduct(data);
+    console.log("ingredients", data.ingredients);
+    setIngredients(data.ingredients);
   };
 
   useEffect(() => {
@@ -97,17 +97,19 @@ function ProductDetails() {
           <div className=" w-[70%] mx-auto flex  flex-col gap-y-5 justify center  rounded-xl px-10 py-10 mb-10 shadow-lg shadow-gray-300 ">
             <h1 className="font-bold lg:text-2xl text-lg">Ingredients Used</h1>
             <ol className="text-gray-600 list-disc lg:text-base text-sm">
-              {/* {singleProduct.ingredients.map((item) => {
-                return <li>{item}</li>;
-              })} */}
-
-              {/* {
-
-                for (let i=0; i < singleProduct.ingredients.length ; i++){
-                  return (<li>{singleProduct.ingredients[i]}</li>)
-                };
-              } */}
-              <li className="text-gray-400 ">{singleProduct.ingredients}</li>
+              {ingredients.length > 0 ? (
+                <div>
+                  {ingredients.map((item, index) => {
+                    return (
+                      <li key={index} className="leading-7">
+                        {item}
+                      </li>
+                    );
+                  })}
+                </div>
+              ) : (
+                <div className="flex items-center justify-center">Not data</div>
+              )}
             </ol>
           </div>
         </div>
