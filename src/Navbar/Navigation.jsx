@@ -226,7 +226,7 @@ function Navigation() {
             <FaInstagram className="text-2xl  cursor-pointer text-pink-700 hover:scale-110 ease-in-out duration-500 " />
           </NavLink>
           <NavLink to={"www.tiktok.com"}>
-            <IoLogoTiktok className="text-2xl  cursor-pointer hover:text-black over:scale-110 ease-in-out duration-500" />
+            <IoLogoTiktok className="text-2xl  cursor-pointer hover:text-black hover:scale-110 ease-in-out duration-500" />
           </NavLink>
           <NavLink
             to="/contact"
