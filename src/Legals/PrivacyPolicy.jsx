@@ -75,7 +75,7 @@ const PrivacyPolicy = () => {
               href="mailto:privacy@example.com"
               className="text-blue-600 hover:underline ml-1"
             >
-              privacy@example.com
+              privacy@gmail.com
             </a>
             .
           </p>
