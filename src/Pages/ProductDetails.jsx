@@ -14,6 +14,8 @@ function ProductDetails() {
 
   let totalPrice = singleProduct.caloriesPerServing * quantity;
 
+  console.log(singleProduct.ingredients);
+
   const getSingleProduct = async () => {
     let data = await fetch(`https://dummyjson.com/recipes/${productID}`);
     data = await data.json();
