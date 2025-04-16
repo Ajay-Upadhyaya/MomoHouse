@@ -14,13 +14,13 @@ createRoot(document.getElementById("root")).render(
         domain="dev-knv3b0h3ict33h8u.us.auth0.com"
         clientId="Sgayxo45rokS3y082CTPHrFSRe6SxyHZ"
         authorizationParams={{
-          redirect_uri: window.location.origin
+          redirect_uri: window.location.origin,
         }}
       >
         <App />
 
         <ToastContainer
-          position="top-center"
+          position="top-right"
           autoClose={1000}
           hideProgressBar={false}
           newestOnTop={false}
@@ -29,7 +29,7 @@ createRoot(document.getElementById("root")).render(
           pauseOnFocusLoss
           draggable
           pauseOnHover
-          theme="light"
+          theme="dark"
           transition={Bounce}
         />
       </Auth0Provider>

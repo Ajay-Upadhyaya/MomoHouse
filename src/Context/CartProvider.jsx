@@ -21,14 +21,14 @@ const cartReducer = (state, action) => {
         const newProduct = { ...action.payload, qty: 1 };
 
         toast.success("Product is added to cart ", {
-          position: "top-center",
+          position: "top-right",
           autoClose: 1000,
           hideProgressBar: false,
           closeOnClick: false,
           pauseOnHover: true,
           draggable: true,
           progress: undefined,
-          theme: "light",
+          theme: "dark",
           transition: Bounce,
         });
         return {
@@ -39,14 +39,14 @@ const cartReducer = (state, action) => {
 
     case "Delete": {
       toast.success("Product is removed from cart ", {
-        position: "top-center",
+        position: "top-right",
         autoClose: 1000,
         hideProgressBar: false,
         closeOnClick: false,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "light",
+        theme: "dark",
         transition: Bounce,
       });
       const deleteProduct = state.items.filter((item) => {
@@ -84,14 +84,14 @@ const cartReducer = (state, action) => {
 
     case "ClearCart": {
       toast.success("Cart is cleared ", {
-        position: "top-center",
+        position: "top-right",
         autoClose: 1000,
         hideProgressBar: false,
         closeOnClick: false,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "light",
+        theme: "dark",
         transition: Bounce,
       });
       return {
